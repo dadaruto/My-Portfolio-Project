@@ -1,5 +1,5 @@
 class BlogPost < ApplicationRecord
-  has_rich_test :content
+  has_rich_text :content
 
   validates :title, presence: true
   validates :content, presence: true
