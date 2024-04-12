@@ -79,6 +79,4 @@ test:
 #
 production:
   <<: *default
-  database: chela_blog_production
-  username: chela_blog
-  password: <%= ENV["CHELA_BLOG_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
