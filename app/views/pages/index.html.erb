@@ -1,36 +1,280 @@
-<h1>Chela's Blog</h1>
-<p>This is my blog where I am going to write about anything that is on my mind.</p>
-<p>
-<%= image_tag("create.jpeg") %>
-</p>
-<h2>Key Features</h2>
-<div class="feature">
-<h3>Responsive Design</h3>
-<p>
-<%= image_tag("responsive-design.jpeg") %>
-</p>
-<p>Enjoy a seamless reading experience on any device.</p>
-</div>
-<div class="feature">
-<h3>User Authentication</h3>
-<p>
-<%= image_tag("authentication.jpeg") %>
-</p>
-<p>Create an account to personalize your blog experience.</p>
-</div>
-<div class="feature">
-<h3>Comments and Interactivity</h3>
-<p>
-<%= image_tag("comments.jpeg") %>
-</p>
-<p>Engage with other readers and share your thoughts.</p>
-</div>
+<h1>My Portfolio</h1>
+<section id="intro">
+  <div class="container">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hello! I'm Chela, a passionate developer ready to showcase my skills and projects.</p>
+    <p>
+      <%= image_tag("my_profile_picture.jpeg", alt: "Chela's Profile Picture") %>
+    </p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Portfolio Project</h3>
+      <h4>Webstack - Portfolio Project</h4>
+      <p>The Webstack - Portfolio Project is a group endeavor led by Chela Ruto, aimed at developing a comprehensive web portfolio. This project spans both front-end and back-end development, emphasizing a robust architecture and the utilization of modern web technologies. Participants are tasked with creating a public GitHub repository, a Google Slides presentation, and a video demo showcasing their project's features. The project must adhere to strict timelines, starting on July 5, 2024, and concluding by July 19, 2024. Manual QA review is mandatory upon project completion. Evaluation criteria include effective use of version control, quality of presentation, and the overall complexity and creativity demonstrated in the project's execution.</p>
+      <h4>Webstack - Portfolio Project - Pitch</h4>
+      <p>The Webstack Portfolio Project Pitch is a crucial presentation where participants introduce their web portfolio project to an audience of professionals and peers. It serves as an opportunity to highlight the project's concept, goals, and technical details in a concise and engaging manner.</p>
+    </div>
+
+    <div class="project">
+      <h3>alx-files_manager</h3>
+      <p>A simple file management API in Express (Node).</p>
+      <h4>Files Manager</h4>
+      <p>A simple file management API built with Express, MongoDB, Redis, Bull and Node.js.</p>
+    </div>
+
+    <div class="project">
+      <h3>Interview Preparation</h3>
+      <p>A collection of interview challenges from ALX-Holberton and their solutions.</p>
+      <h4>alx-interview:</h4>
+      <ul>
+        <li>0x00-pascal_triangle</li>
+        <li>0x01-lockboxes</li>
+        <li>0x02-minimum_operations</li>
+        <li>0x03-log_parsing</li>
+        <li>0x04-utf8_validation</li>
+        <li>0x05-nqueens</li>
+        <li>0x06-starwars_api</li>
+        <li>0x07-rotate_2d_matrix</li>
+        <li>0x08-making_change</li>
+        <li>0x09-island_perimeter</li>
+        <li>0x0A-primegame</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Backend</h3>
+      <p>A collection of projects for learning backend development conceptd.</p>
+      <h4>alx-backend:</h4>
+      <ul>
+        <li>0x00-pagination</li>
+        <li>0x01-caching</li>
+        <li>0x02-i18n</li>
+        <li>0x03-queing_system_in_js</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Backend - Javascript</h3>
+      <p>A collection of projects for learning backend development with JavaScript</p>
+      <h4>alx-backend-javascript:</h4>
+      <ul>
+        <li>0x00-ES6_basic</li>
+        <li>0x01-ES6_promise</li>
+        <li>0x02-ES6_classes</li>
+        <li>0x03-ES6_data_manipulation</li>
+        <li>0x04-TypeScript</li>
+        <li>0x05-Node_JS_basic</li>
+        <li>0x06-unittests_in_js</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Backend - User Data</h3>
+      <p>A collection of projects for learning to process user data with python</p>
+      <h4>alx-backend-user-data:</h4>
+      <ul>
+        <li>0x00-personal_data</li>
+        <li>0x01-Basic_authentication</li>
+        <li>0x02-Session_authentication</li>
+        <li>user_authentication_service</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Backend - Python</h3>
+      <p>A collection of projects for learning backend development with Python.</p>
+      <h4>alx-backend-python:</h4>
+      <ul>
+        <li>0x00-python_variable_annotations</li>
+        <li>0x01-python_async_comprehension</li>
+        <li>0x02-python_async_comprehension</li>
+        <li>0x03-Unittests_and_integration_tests</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Backend - Storage</h3>
+      <p>A collection of projects for learning data storage in backend development.</p>
+      <h4>alx-backend-storage:</h4>
+      <ul>
+        <li>0x00-MySQL_Advanced</li>
+        <li>0x01-NoSQL</li>
+        <li>0x02-redis_basic</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Simple Shell</h3>
+      <p>This project is a simple Unix shell implemented in C using the gnu89 standard.</p>
+      <h4>Files in Repository:</h4>
+      <ul>
+        <li>main.c</li>
+        <li>shell.h</li>
+        <li>builtins.c</li>
+        <li>README.md</li>
+      </ul>
+      <h4>Usage:</h4>
+      <p>To build and run the shell:</p>
+      <pre><code>gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o simple_shell
+./simple_shell</code></pre>
+      <h4>Control Operators:</h4>
+      <ul>
+        <li><code>;</code> - Separates commands to be executed unconditionally.</li>
+        <li><code>&&</code> - Executes next command if previous succeeded.</li>
+        <li><code>||</code> - Executes next command if previous failed.</li>
+      </ul>
+      <h4>Built-In Commands:</h4>
+      <ul>
+        <li><code>alias</code> - Prints or sets aliases.</li>
+        <li><code>cd</code> - Changes the working directory.</li>
+        <li><code>env</code> - Prints environment variables.</li>
+        <li><code>exit</code> - Exits the shell.</li>
+        <li><code>help</code> - Prints help for built-in commands.</li>
+        <li><code>history</code> - Prints command history.</li>
+        <li><code>setenv</code> - Sets an environment variable.</li>
+        <li><code>unsetenv</code> - Unsets an environment variable.</li>
+      </ul>
+      <h4>Contributor Setup:</h4>
+      <p>Install GCC and load the bash script using <code>source .bashrc</code>. Use commands like <code>build</code>, <code>run</code>, <code>install</code>, and <code>viewman</code> for various tasks.</p>
+    </div>
+    
+     
+    <div class="project">
+      <h3>System - Engineering - Devops</h3>
+      <p>A collection of projects for learning system engineering development operations.</p>
+      <h4>alx-system_engineering-devops:</h4>
+      <ul>
+        <li>0x00-shell_basics</li>
+        <li>0x01-shell_permissions</li>
+        <li>0x02-shell_redirections</li>
+        <li>0x03-shell_variables_expansions</li>
+        <li>0x04-loops_conditions_and_parsing</li>
+        <li>0x05-processes_and_signals</li>
+        <li>0x06-regular_expressions</li>
+        <li>0x07-networking_basics</li>
+        <li>0x08-networking_basics_2</li>
+        <li>0x09-web_infrastructure_design</li>
+        <li>0x0A-configuration_management</li>
+        <li>0x0B-ssh</li>
+        <li>0x0C-web_server</li>
+        <li>0x0D-web_stack_debugging_0</li>
+        <li>0x0E-web_stack_debugging_1</li>
+        <li>0x0F-load_balancer</li>
+        <li>0x10-https_ssl</li>
+        <li>0x11-what_happens_when_your_type_google_com_in_your_browser_and_press_enter</li>
+        <li>0x12-web_stack_debugging_2</li>
+        <li>0x13-firewall</li>
+        <li>0x14-mysql</li>
+        <li>0x15-api</li>
+        <li>0x16-api_advanced</li>
+        <li>0x17-web_stack_debugging_3</li>
+        <li>0x18-webstack_monitoring</li>
+        <li>0x19-postmortem</li>
+        <li>0x1A-application_server</li>
+        <li>0x1B-web_stack_debugging_4</li>
+        <li>attack_is_the_defense</li>
+        <li>command_line_for_the_win</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Higher - Level - Programming</h3>
+      <p>A collection of projects for learning higher level programming concepts with Python.</p>
+      <h4>alx-higher_level_programming:</h4>
+      <ul>
+        <li>0x00-python-hello_world</li>
+        <li>0x01-python-if_else_loops_functions</li>
+        <li>0x02-python-import_modules</li>
+        <li>0x03-python-data_structures</li>
+        <li>0x04-python-more_data_structures</li>
+        <li>0x05-python-exceptions</li>
+        <li>0x06-python-classes</li>
+        <li>0x07-python-test_driven_development</li>
+        <li>0x08-python-more_classes</li>
+        <li>0x09-python-everything_is_object</li>
+        <li>0x0A-python-inheritance</li>
+        <li>0x0B-python-input_output</li>
+        <li>0x0C-python-almost_a_circle</li>
+        <li>0x0D-SQL_introduction</li>
+        <li>0x0E-SQL_more_queries</li>
+        <li>0x0F-python-object_relational_mapping</li>
+        <li>0x10-python-network_0</li>
+        <li>0x11-python-network_1</li>
+        <li>0x12-javascript-warm_up</li>
+        <li>0x13-javascript)objects_scopes_closures</li>
+        <li>0x14-javascript-web_scraping</li>
+        <li>0x15-javascript-web_jquery</li>
+    </div>
+
+    <div class="project">
+      <h3>Low - Level - Programming</h3>
+      <p>A collection of projects for learning low level programming concepts using C.</p>
+      <h4>alx-low_level_programming</h4>
+      <ul>
+        <li>0x00-hello_world</li>
+        <li>0x01-variable_if_else_while</li>
+        <li>0x02-functions_nested_loops</li>
+        <li>0x03-debugging</li>
+        <li>0x04-more_functions_nested_loops</li>
+        <li>0x05-pointers_arrays_strings</li>
+        <li>0x06-pointers_arrays_string</li>
+        <li>0x07-pointers_arrays_strings</li>
+        <li>0x08-recursion</li>
+        <li>0x09-static_libraries</li>
+        <li>0x0A-argc_argv</li>
+        <li>0x0B-malloc_free</li>
+        <li>0x0C-more_malloc_free</li>
+        <li>0x0D-preprocessor</li>
+        <li>0x0E-structures_typedef</li>
+        <li>0x0F-function_pointers</li>
+        <li>0x10-variadic_functions</li>
+        <li>0x11-printf</li>
+        <li>0x12-singly_linked_lists</li>
+        <li>0x13-more_singly_linked_lists</li>
+        <li>0x14-bit_manipulation</li>
+        <li>0x15-file_io</li>
+        <li>0x17-doubly_limked_lists</li>
+        <li>0x18-dynamic_libraries</li>
+        <li>0x1A-hash_tables</li>
+        <li>0x1C-makefiles</li>
+        <li>0x1E-search_algorithms</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>ALX Zero Day</h3>
+      <p>This is the beginning of my journey towards becoming an ALX certified software engineer.</p>
+      <h4>alx-zero_day</h4>
+      <ul>
+        <li>0x00-vagrant</li>
+        <li>0x03-git</li>
+      </ul>    
+    </div>
+
+    <div class="project">
+      <h3>ALX Pre Course</h3>
+      <h4>alx-pre_course</h4>
+      <ul>
+        <li>0x02-git</li>
+        <li>0x03-git</li>
+      </ul>
+    </div>
+  
+  </div>
+</section>
+
 <section id="about">
   <div class="container">
-    <h2>About Chela's Blog</h2>
-    <p>Chela's Blog was inspired by a passion for storytelling and a desire to create a platform where people can share their stories. Started as a Portfolio Project for Holberton School, this blog aims to provide a space for creative expression and meaningful conversations.</p>
+    <h2>About Me</h2>
+    <p>My name is Chela Ruto, and I am passionate about software development and web technologies. My journey in programming began with a curiosity for how websites and applications work. Over time, this curiosity grew into a dedicated pursuit of knowledge and skill in various programming languages and frameworks. I have a particular interest in front-end development, back-end systems, and creating user-friendly interfaces.</p>
     <div class="team">
-      <h3>Meet the Team</h3>
+      <h3>Connect with Me</h3>
       <ul>
         <li><a href="https://www.linkedin.com/in/dorcas-chela/">Chela's LinkedIn</a></li>
         <li><a href="https://github.com/dadaruto">Chela's GitHub</a></li>
@@ -40,8 +284,24 @@
     <div class="github">
       <h3>GitHub Repository</h3>
 
-      <p>Check out the code for Chela's Blog on <a href="https://github.com/dadaruto/chela_blog">GitHub</a>.</p>
+      <p>Check out the code for My Portfolio on <a href="https://github.com/dadaruto/My-Portfolio-Project">GitHub</a>.</p>
     </div>
   </div>
 </section>
-
+<section id="contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>Let's connect! Reach out via email or social media.</p>
+    <form action="mailto:cheladorcas.ruto@gmail.com" method="post" enctype="text/plain">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Chela. All rights reserved.</p>
+  </div>
+</footer>
