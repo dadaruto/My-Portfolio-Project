@@ -1,12 +1,10 @@
 class BlogPostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_blog_post, except: [:index, :new, :create]
-  
+  before_action :authenticate_chela!, only: [:edit, :update, :destroy]
+  before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
+
   def index
-    @blog_posts = user_signed_in? ? BlogPost.sorted : BlogPost.published.sorted
-    @pagy, @blog_posts = pagy(@blog_posts)
-  rescue Pagy::OverflowError
-    redirect_to root_path(page: 1)
+    @blog_posts = BlogPost.published.sorted.paginate(page: params[:page], per_page: 10)
   end
 
   def show
@@ -17,7 +15,7 @@ class BlogPostsController < ApplicationController
   end
 
   def create
-    @blog_post = BlogPost.new(blog_post_params)
+    @blog_post = current_user.blog_posts.build(blog_post_params)
     if @blog_post.save
       redirect_to @blog_post, notice: 'Blog post was successfully created.'
     else
@@ -26,19 +24,26 @@ class BlogPostsController < ApplicationController
   end
 
   def edit
+    unless @blog_post.user == current_user || current_user.admin?
+      redirect_to @blog_post, alert: "You are not authorized to edit this blog post."
+    end
   end
 
   def update
-    if @blog_post.update(blog_post_params)
-      redirect_to @blog_post, notice: 'Blog post was successfully updated.'
+    if @blog_post.user == current_user || current_user.admin?
+      if @blog_post.update(blog_post_params)
+        redirect_to @blog_post, notice: 'Blog post was successfully updated.'
+      else
+        render :edit, status: :unprocessable_entity
+      end
     else
-      render :edit, status: :unprocessable_entity
+      redirect_to @blog_post, alert: "You are not authorized to edit this blog post."
     end
   end
 
   def destroy
     @blog_post.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: 'Blog post was successfully deleted.'
   end
 
   private
@@ -48,10 +53,12 @@ class BlogPostsController < ApplicationController
   end
 
   def set_blog_post
-    @blog_post = user_signed_in? ? BlogPost.find(params[:id]) : BlogPost.published.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    redirect_to root_path
+    @blog_post = BlogPost.find(params[:id])
   end
 
+  def authenticate_chela!
+    unless current_user.email == "cheladorcas.ruto@gmail.com"
+      redirect_to(root_path, alert: "You are not authorized to access this page.")
+    end
+  end
 end
-
