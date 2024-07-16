@@ -9,10 +9,13 @@
 user = User.where(email: "cheladorcas.ruto@gmail.com").first_or_initialize
 user.update!(
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  admin: true
 )
+
 
 100.times do |i|
   blog_post = BlogPost.where(title: "Blog Post #{i}").first_or_initialize
-  blog_post.update(content: "Hello world", published_at: Time.current)
+  blog_post.update(content: "Hello world", published_at: Time.current, user: user)
 end
+
