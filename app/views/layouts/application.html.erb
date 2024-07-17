@@ -15,16 +15,17 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <div>
-    <%= link_to 'Home', root_path %>
-    <%= link_to 'About Me', about_me_path %>
-    <%= link_to 'Portfolio', portfolio_path %>
-    <%= link_to 'Blog', blog_path %>
-    <% if admin_signed_in? %>
-      <%= link_to 'Logout', destroy_admin_session_path, method: :delete %>
-    <% end %>
-  </div>
-
+  <% unless current_page?(root_path) %>
+    <div>
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'About Me', about_me_path %>
+      <%= link_to 'Portfolio', portfolio_path %>
+      <%= link_to 'Blog', blog_path %>
+      <% if admin_signed_in? %>
+        <%= link_to 'Logout', destroy_admin_session_path, method: :delete %>
+      <% end %>
+    </div>
+  <% end %>
   <%= yield %>
 </body>
 </html>
